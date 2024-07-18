@@ -1,7 +1,7 @@
 const  express = require('express');
-const ListView = require('../models/ListView');
 const router = express.Router();
-
+const ListView = require('../models/ListView');
+const mongoose = require('mongoose');
 
 router.post('/listview', ( req, resp)=>{
     try{
@@ -15,16 +15,5 @@ router.post('/listview', ( req, resp)=>{
 })
 
 
-router.post('/detailview/:id', async( req, resp)=>{
-    try{
-        let data = await ListView.findById(req.params);
-        console.log([data]);
-        return resp.json([data]);
-    }
-    catch(error){
-        console.error(error.message);
-        resp.send("Server Error")
-    }
-})
 
 module.exports = router;

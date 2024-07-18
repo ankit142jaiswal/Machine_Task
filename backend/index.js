@@ -20,6 +20,8 @@ app.use((req,resp,next)=>{
 
 
 app.use('/api', require("./Routes/CreateUser"));
-app.use('/api', require("./Routes/DisplayData"));
+app.use('/api', require("./Routes/DisplayUser"));
+app.use('/api', require("./Routes/DetailView"));
+
 
 app.listen(5000);

@@ -7,11 +7,9 @@ async function dbConnect() {
     await mongoose.connect(mongoURI).then(async () => {
 
         console.log("Connected Successfully !!");
-        const list_view = await mongoose.connection.db.collection('listview')
+        const list_view = await mongoose.connection.db.collection('listviews')
         await list_view.find({}).toArray().then(
             async (data, err) => {
-
-
                 if (err) {
                     console.log("---", err);
                 } else {
