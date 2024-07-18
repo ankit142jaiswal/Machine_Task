@@ -7,7 +7,7 @@
     "dev": "node index.js",
     "build": "npm i"
   },
-  "proxy": "",
+  "proxy": "https://machine-task-wxf6.onrender.com",
   "author": "",
   "dependencies": {
     "bcryptjs": "^2.4.3",
